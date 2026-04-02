@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArborOps + Olive | AI Operations Assistant for Field Teams</title>
+  <meta name="description" content="ArborOps + Olive combines operations management, employee tools, AI scheduling, weather intelligence, routing, reminders, portal chat, and voice interaction into one system." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">
+        <img src="olive-icon.svg" alt="Olive icon" class="brand-icon" />
+        <span>ArborOps + Olive</span>
+      </div>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#impact">Impact</a>
+        <a href="#demo">Demo Story</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">OpenAI Codex Competition Submission</p>
+        <h1>ArborOps + Olive</h1>
+        <p class="subtitle">
+          An AI-powered operations system for tree care and field service teams,
+          built to help managers and employees plan work, communicate faster,
+          schedule smarter, and act in real time.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#features">Explore Features</a>
+          <a class="button secondary" href="#submission">Submission Copy</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat">
+          <span class="stat-value">1 system</span>
+          <span class="stat-label">for app, portal, AI, scheduling, and operations</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Voice + text</span>
+          <span class="stat-label">across iPhone and employee portal</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Actionable AI</span>
+          <span class="stat-label">weather, routing, reminders, scheduling, and follow-up tasks</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Overview</p>
+        <h2>What we built</h2>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>ArborOps</h3>
+          <p>
+            A custom operations platform for employees, managers, foremen, mechanics,
+            estimators, and crews. It powers jobs, estimates, routing, scheduling,
+            portal access, and workforce workflows.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Olive</h3>
+          <p>
+            A conversational internal assistant embedded into the iPhone app and
+            employee portal. Olive helps people get answers, make decisions,
+            and perform real work instead of just chatting.
+          </p>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <h3>Why it matters</h3>
+        <p>
+          Most field-service operations tools make people bounce between scheduling
+          screens, weather sites, notes, route apps, and team messages. ArborOps + Olive
+          turns that into a single workflow. Employees can ask natural questions like
+          “What do I need to know today?”, “What still needs to be scheduled?”,
+          “What’s the forecast in Clermont tomorrow morning?”, or
+          “Schedule that follow-up for Monday at 9.”
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow">Features</p>
+        <h2>What Olive can do</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Role-aware operations assistant</h3>
+          <p>Olive uses ArborOps context to answer differently for managers, schedulers, foremen, mechanics, estimators, and crews.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Today summary</h3>
+          <p>Understands today’s work, calendar items, key announcements, and operational priorities.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Scheduling gap detection</h3>
+          <p>Surfaces unscheduled jobs, pending estimates, and missing crew assignments.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Schedule recommendations</h3>
+          <p>Recommends what to schedule next based on backlog, distance clustering, current work, and route relevance.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Schedule execution</h3>
+          <p>After confirmation, Olive can schedule jobs or estimates through a live Odoo endpoint.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Weather tied to work</h3>
+          <p>Checks weather for today’s jobs or estimates using context-aware locations and Open-Meteo data.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Weather anywhere</h3>
+          <p>Understands direct place-based questions such as Clermont tomorrow morning or Orlando this afternoon.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Route recommendations</h3>
+          <p>Uses geocoding and routing logic to suggest better stop order and travel planning.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Reminder and follow-up tasks</h3>
+          <p>Creates live reminder tasks in ArborOps so Olive can behave like a personal secretary, not just an assistant.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Voice conversation</h3>
+          <p>Integrated with Azure Speech for microphone input and spoken responses using Ava Dragon HD voice.</p>
+        </article>
+        <article class="feature-card">
+          <h3>iPhone app integration</h3>
+          <p>Employees can talk to Olive directly inside the ArborOps mobile app with Azure-authenticated access.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Portal integration</h3>
+          <p>Olive is also available inside the desktop employee portal so workers can use her from the office or a laptop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Architecture</p>
+        <h2>How it works</h2>
+      </div>
+
+      <div class="architecture">
+        <div class="arch-col">
+          <h3>Clients</h3>
+          <ul>
+            <li>ArborOps iPhone app</li>
+            <li>ArborOps web portal</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h3>Identity</h3>
+          <ul>
+            <li>Azure authentication with MSAL</li>
+            <li>Dedicated Olive API audience</li>
+            <li>Validated bearer tokens in n8n</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h3>AI orchestration</h3>
+          <ul>
+            <li>n8n workflow engine</li>
+            <li>Azure AI for chat and reasoning</li>
+            <li>Azure Speech for voice</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h3>Operational data</h3>
+          <ul>
+            <li>Odoo / ArborOps context APIs</li>
+            <li>Scheduling, estimates, jobs, crews</li>
+            <li>Reminders and follow-up tasks</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h3>External tools</h3>
+          <ul>
+            <li>Open-Meteo for weather + geocoding</li>
+            <li>OpenRouteService for routing + geocoding</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <h3>Design principle</h3>
+        <p>
+          Olive is not a generic chatbot. She is an operational layer on top of
+          ArborOps. The system fetches only the context needed for the user’s
+          intent, then lets AI explain and act on it in a conversational way.
+        </p>
+      </div>
+    </section>
+
+    <section id="impact" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow">Impact</p>
+        <h2>Why this project stands out</h2>
+      </div>
+
+      <div class="grid three">
+        <div class="card">
+          <h3>Built for real operations</h3>
+          <p>This is not a demo chatbot. It is tied into actual jobs, estimates, scheduling logic, reminders, routes, and field workflows.</p>
+        </div>
+        <div class="card">
+          <h3>Cross-platform assistant</h3>
+          <p>The same assistant works on mobile and desktop, with both text and voice experiences.</p>
+        </div>
+        <div class="card">
+          <h3>Action, not just answers</h3>
+          <p>Olive can create tasks, guide scheduling, suggest routes, and help managers decide what to do next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Demo story</p>
+        <h2>What a real interaction looks like</h2>
+      </div>
+
+      <div class="chat-demo">
+        <div class="bubble user">What should I schedule next?</div>
+        <div class="bubble olive">
+          You’ve got a cluster of pending work close to tomorrow’s route. The best fit is Lakewood first. Want me to schedule that?
+        </div>
+        <div class="bubble user">Yes. Tomorrow at 9 with Bravo Crew.</div>
+        <div class="bubble olive">
+          Done — I scheduled Lakewood at 9 AM with Bravo Crew.
+        </div>
+        <div class="bubble user">What’s the weather in Clermont tomorrow morning?</div>
+        <div class="bubble olive">
+          Clermont looks mild tomorrow morning with a moderate chance of rain. I’d keep an eye on showers later in the morning.
+        </div>
+      </div>
+    </section>
+
+    <section id="submission" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow">Competition submission</p>
+        <h2>Ready-to-use submission copy</h2>
+      </div>
+
+      <div class="card">
+        <h3>Project title</h3>
+        <p><strong>ArborOps + Olive: AI Operations Assistant for Field Service Teams</strong></p>
+
+        <h3>Suggested URL slug</h3>
+        <p><code>arborops-olive-showcase</code></p>
+
+        <h3>Submission description</h3>
+        <p>
+          ArborOps + Olive is an AI-powered operations system built for real-world field service teams. We created a custom employee platform called ArborOps and layered Olive on top as a conversational internal assistant that works inside both the iPhone app and the employee portal.
+        </p>
+        <p>
+          Olive is not just a chatbot. She understands role-based operational context from ArborOps, including jobs, estimates, crews, scheduling gaps, maintenance, reminders, and route data. Managers can ask what still needs to be scheduled, what the forecast looks like for work sites, what the best route is for today’s estimates and jobs, or what they should schedule next. Olive can also create live reminder and follow-up tasks and, after confirmation, schedule work directly through the backend.
+        </p>
+        <p>
+          The system uses Azure authentication for the app, Azure AI for reasoning, Azure Speech for voice interaction, n8n for orchestration, Odoo/ArborOps for business logic and data, Open-Meteo for weather, and OpenRouteService for geocoding and routing. We designed Olive to feel like an internal personal secretary for operations, not a generic AI. She answers naturally, supports voice and text, and helps employees act faster without jumping between multiple tools.
+        </p>
+        <p>
+          This project showcases how OpenAI Codex helped us design, debug, and ship a full-stack internal assistant across authentication, workflow orchestration, iPhone integration, employee portal integration, scheduling logic, route planning, reminders, and operational UX. The result is a practical AI system built for a real business workflow with measurable daily value.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with OpenAI Codex, Azure AI, Azure Speech, n8n, Odoo, Open-Meteo, and OpenRouteService.</p>
+  </footer>
+</body>
+</html>
