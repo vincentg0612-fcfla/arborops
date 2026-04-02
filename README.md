@@ -1,92 +1,212 @@
-# 🌿 ArborOps + Olive
+# ArborOps + Olive  
+### AI-Powered Operations Platform for Tree Service Companies
 
-**AI Operations Assistant for Field Service Teams**
+ArborOps is a fully customized field operations platform built on top of Odoo 19, transformed into a purpose-built system for tree service businesses.  
 
-ArborOps + Olive is a real-world AI-powered operations system designed to help field service teams plan work, communicate faster, and make better decisions using natural conversation.
-
----
-
-## 🚀 Overview
-
-This project combines a custom-built operations platform (**ArborOps**) with an intelligent assistant (**Olive**) that works across both mobile and web environments.
-
-Olive acts as a role-aware assistant that understands operational context and helps employees take action — not just get answers.
+At the core of ArborOps is **Olive**, an AI assistant that understands real operational context — schedules, crews, jobs, weather, and routing — and turns natural language into actionable decisions.
 
 ---
 
-## 🧠 Key Capabilities
+## 🌳 The Problem
 
-### 📊 Operations Awareness
-- Understands jobs, estimates, crews, schedules, and daily workload
-- Summarizes what matters today based on role and context
+Tree service companies operate in highly dynamic environments:
 
-### 📅 Smart Scheduling
-- Identifies unscheduled jobs and backlog
-- Recommends what to schedule next using distance and routing logic
-- Executes scheduling actions after confirmation
+- Crews move across multiple job sites daily
+- Scheduling depends on geography, weather, and crew availability
+- Estimates, jobs, and routing are tightly coupled
+- Existing tools are generic and disconnected
 
-### 🌦️ Weather Intelligence
-- Provides forecasts tied to job locations
-- Handles natural queries like:
-  - “What’s the weather in Clermont tomorrow morning?”
-  - “Will it rain during today’s jobs?”
-
-### 🧭 Routing Insights
-- Uses geocoding and routing to recommend efficient job order
-- Helps reduce travel time and improve crew efficiency
-
-### 🔁 Task & Reminder Automation
-- Creates follow-ups and reminders directly in the system
-- Functions like a personal operations assistant
-
-### 🗣️ Voice + Chat Interaction
-- Supports both text and voice communication
-- Integrated with Azure Speech for real-time interaction
-
-### 📱 Cross-Platform Access
-- Available in:
-  - iPhone app
-  - Employee web portal
-- Consistent experience across both
+Most ERP systems (including Odoo out-of-the-box) are not designed for this workflow.
 
 ---
 
-## 🏗️ System Architecture
+## 🚀 What We Built
 
-- **Frontend:** iOS app + web portal  
-- **Authentication:** Azure (MSAL, secure token validation)  
-- **AI Layer:** Azure AI + n8n orchestration  
-- **Backend:** Odoo (ArborOps operations system)  
-- **Weather:** Open-Meteo  
-- **Routing & Geocoding:** OpenRouteService  
+We transformed Odoo 19 into a **vertical SaaS platform for tree service operations**.
 
-Olive sits on top of this stack as a **decision and action layer**, not just a chatbot.
+### Core System (Odoo → ArborOps)
 
----
+We extended and rebuilt key Odoo modules to support real-world tree service workflows:
 
-## 🎯 Purpose
+- **Jobs & Work Orders**
+  - Location-based job tracking
+  - Crew assignments and live status
+  - Route-aware scheduling
 
-Field service teams often rely on multiple tools for scheduling, routing, weather, and communication.
+- **Estimates Pipeline**
+  - Visit scheduling
+  - Conversion tracking (quoted → won)
+  - Integration with job creation
 
-This system replaces that fragmented workflow with a single interface where users can simply ask:
+- **Crew & Workforce Management**
+  - Crew grouping (Alpha, Bravo, etc.)
+  - Time tracking and attendance
+  - Role-based access (manager, foreman, crew)
 
-> “What should I schedule next?”  
-> “What do I need to know today?”  
-> “Schedule that job tomorrow at 9.”
-
-And get real, actionable results.
-
----
-
-## 🌐 About This Repository
-
-This repository contains the public-facing showcase site for the ArborOps + Olive system.
-
-It is intended to demonstrate the product experience, capabilities, and architecture — not the underlying private implementation.
+- **Scheduling Engine**
+  - Calendar-based operations view
+  - Route-aware clustering
+  - Travel buffer management
 
 ---
 
-## 👤 Creator
+## 🫒 Olive — AI Operations Assistant
 
-**Garrett Vincent**  
-ArborOps / Olive Branch Tree Care
+Olive is not a chatbot.  
+She is an **operational interface to the business**.
+
+### What Olive Can Do
+
+- Answer real-time questions:
+  - “What do I need to know today?”
+  - “What still needs to be scheduled?”
+  - “Who is working with me today?”
+
+- Weather-aware insights:
+  - Job-level weather risk
+  - Forecast-based planning
+
+- Smart scheduling:
+  - Recommends optimal job groupings
+  - Minimizes travel distance
+  - Aligns with existing crew routes
+
+- Task execution:
+  - Create reminders
+  - Schedule jobs and estimates
+  - Trigger backend workflows
+
+---
+
+## 🧠 Architecture
+
+ArborOps combines multiple systems into a unified AI platform:
+
+### Backend
+- **Odoo 19 (heavily customized)**
+  - Core data model (jobs, crews, estimates)
+  - REST APIs for Olive actions
+  - Portal system for employees
+
+### AI Layer
+- **Azure AI (LLM + Speech)**
+  - Natural language understanding
+  - Voice conversation capability
+
+### Orchestration
+- **n8n**
+  - Workflow engine for Olive
+  - Scheduling logic
+  - Weather integration (Open-Meteo)
+  - Routing recommendations
+
+### Mobile App (iOS)
+- Built with Swift + MSAL
+- Azure-authenticated sessions
+- Voice + chat interface with Olive
+
+### Portal
+- Custom Odoo SPA
+- Employee dashboard
+- Embedded Olive assistant
+- Real-time operational context
+
+---
+
+## 🔐 Enterprise-Grade Authentication
+
+- Microsoft Entra ID (Azure AD)
+- Token-based identity propagation
+- Role-aware context (manager, crew, etc.)
+- Secure API gateway between systems
+
+---
+
+## 🗺 Intelligent Scheduling System
+
+We implemented a custom scheduling model:
+
+- Haversine-based clustering
+- Job proximity grouping
+- Route anchoring to existing schedules
+- Travel buffer optimization
+
+Olive can:
+- Recommend what to schedule next
+- Ask for missing inputs (time, crew)
+- Execute scheduling via API
+
+---
+
+## 🌦 Real-Time Weather Integration
+
+- Open-Meteo API integration
+- Location-based forecasts
+- Time-of-day awareness (morning, afternoon, etc.)
+- Weather risk surfaced in scheduling decisions
+
+---
+
+## 📱 Cross-Platform Experience
+
+### iOS App
+- Native Swift UI
+- Voice-enabled Olive assistant
+- Real-time operations access
+
+### Web Portal
+- Full management dashboard
+- Olive chat embedded in UI
+- Scheduling + routing tools
+
+---
+
+## 🔥 Key Innovation
+
+This project turns a traditional ERP into:
+
+> **An AI-driven operational control system for real-world field work**
+
+Olive bridges:
+- human language  
+- business data  
+- real-world constraints  
+
+---
+
+## 📸 Product Screens
+
+(See screenshots in repository)
+
+- iOS app (jobs, schedules, Olive assistant)
+- Manager portal (calendar, routing, Olive chat)
+- Live scheduling workflows
+
+---
+
+## 🏁 Outcome
+
+ArborOps is not a prototype.
+
+It is a working system that:
+- manages real operational workflows
+- integrates AI into daily decision-making
+- replaces multiple disconnected tools with one intelligent platform
+
+---
+
+## 👤 Built By
+
+Garrett Vincent  
+Systems Engineer  
+
+---
+
+## 🌐 Future Vision
+
+- Fully autonomous scheduling
+- Predictive workload balancing
+- Voice-first operations control
+- Multi-company deployment
+
+---
